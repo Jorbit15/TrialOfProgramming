@@ -1,0 +1,77 @@
+using System;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double i, a, b, ergebnis = 0;
+            string input;
+            Console.WriteLine("Hello World!");
+
+            Console.WriteLine("Choose your option: ");
+            Console.WriteLine("1 = Addition (a+b) ");
+            Console.WriteLine("2 = Subtraction (a-b) ");
+            Console.WriteLine("3 = Multiplication (a*b) ");
+            Console.WriteLine("4 = Division(a/b) ");
+            input = Console.ReadLine();
+            i = Convert.ToDouble(input);
+            Console.WriteLine("Please enter a: ");
+            input = Console.ReadLine();
+            a = Convert.ToDouble(input);
+            Console.WriteLine("Please enter b: ");
+            input = Console.ReadLine();
+            b = Convert.ToDouble(input);
+            switch (i)
+            {
+                default:
+                    Console.WriteLine("Thats not an option...");
+                    break;
+                case 1:
+                    ergebnis = Plus(a, b);
+
+                    break;
+                case 2:
+                    ergebnis = Minus(a, b);
+                    break;
+                case 3:
+                    ergebnis = Mal(a, b);
+                    break;
+                case 4:
+                    ergebnis = Geteilt(a, b);
+                    break;
+            }
+            Console.WriteLine("Result: " + ergebnis);      
+                }
+
+        static double Plus (double a, double b)
+        {
+            double summe = 0;
+            summe = a + b;
+
+            return summe;
+        }
+        static double Minus (double a, double b)
+        {
+            double summe = 0;
+            summe = a - b;
+
+            return summe;
+        }
+        static double Mal (double a, double b)
+        {
+            double summe = 0;
+            summe = a * b;
+
+            return summe;
+        }
+        static double Geteilt (double a, double b)
+        {
+            double summe = 0;
+            summe = a / b;
+
+            return summe;
+        }
+    }
+}
